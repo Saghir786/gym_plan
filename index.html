@@ -32,6 +32,37 @@
     footer { margin: 30px 0 60px; color: var(--muted); font-size: .9rem; }
     .badge { display:inline-block; padding: 2px 8px; border-radius: 999px; background: rgba(34,211,238,0.12); border:1px solid rgba(34,211,238,0.35); color: var(--accent); font-size: .8rem; }
   </style>
+  <!-- PWA install hooks -->
+  <meta name="theme-color" content="#0f172a">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" sizes="192x192" href="icons/icon-192.png">
+  <link rel="icon" sizes="512x512" href="icons/icon-512.png">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('service-worker.js');
+      });
+    }
+    let deferredPrompt;
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      const hint = document.getElementById('install-hint');
+      if (hint) hint.style.display = 'block';
+    });
+    function installApp(){
+      const hint = document.getElementById('install-hint');
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.finally(() => {
+          if (hint) hint.style.display = 'none';
+          deferredPrompt = null;
+        });
+      } else if (hint) {
+        hint.style.display = 'none';
+      }
+    }
+  </script>
 </head>
 <body>
   <div class="wrap">
@@ -61,6 +92,12 @@
         <li><span>🔥 <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=GQXpRWdtzRg">5‑minute warm‑up (DeltaBolic)</a> before starting.</span></li>
       </ul>
     </section>
+
+    <!-- Install hint bubble -->
+    <div id="install-hint" style="position:fixed;left:12px;right:12px;bottom:12px;background:#111827;color:#e5e7eb;border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:10px 12px;display:none;z-index:10;">
+      <strong>Install this app?</strong>
+      <button onclick="installApp()" style="margin-left:10px;padding:8px 12px;border-radius:10px;border:1px solid rgba(255,255,255,0.2);background:#0f172a;color:#e5e7eb;">Install</button>
+    </div>
 
     <footer>
       Exercise tips linked from <strong>Andrew Kwong (DeltaBolic)</strong> YouTube Shorts. This page is for personal education only.
