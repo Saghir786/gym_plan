@@ -6,142 +6,24 @@
   <title>Beginner Gym Routine with How‑To Shorts</title>
   <style>
     :root {
-      --bg: #0f172a; /* slate-900 */
-      --card: #111827; /* gray-900 */
-      --soft: #1f2937; /* gray-800 */
-      --text: #e5e7eb; /* gray-200 */
-      --muted: #9ca3af; /* gray-400 */
-      --accent: #22d3ee; /* cyan-400 */
+      --bg: #0f172a;
+      --card: #111827;
+      --soft: #1f2937;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --accent: #22d3ee;
     }
-    html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial; }
     .wrap { max-width: 900px; margin: 40px auto; padding: 0 20px; }
     header { display:flex; align-items:center; gap:16px; margin-bottom: 24px; }
     header h1 { font-size: clamp(1.6rem, 2.4vw, 2.2rem); margin:0; }
-    header p { margin:0; color: var(--muted); }
-    .card { background: linear-gradient(180deg, var(--card), var(--soft)); border: 1px solid #111827; border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
-    .grid { display:grid; gap:16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-    h2 { font-size: 1.25rem; margin: 0 0 10px; letter-spacing:.2px; }
-    h3 { font-size: 1.05rem; margin: 18px 0 8px; color: var(--accent); }
-    ul { list-style: none; padding-left: 0; margin: 0; }
-    li { padding: 10px 12px; border-radius: 12px; background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.04); display:flex; justify-content: space-between; align-items:center; gap: 12px; }
-    li + li { margin-top: 10px; }
-    a { color: var(--text); text-decoration: none; }
-    a.link { color: var(--accent); font-weight: 600; }
-    .meta { font-size: .9rem; color: var(--muted); }
-    .tip { margin-top: 18px; font-size: .95rem; color: var(--muted); }
-    footer { margin: 30px 0 60px; color: var(--muted); font-size: .9rem; }
-    .badge { display:inline-block; padding: 2px 8px; border-radius: 999px; background: rgba(34,211,238,0.12); border:1px solid rgba(34,211,238,0.35); color: var(--accent); font-size: .8rem; }
+    .card { background: linear-gradient(180deg, var(--card), var(--soft)); border-radius: 16px; padding: 20px; }
   </style>
 </head>
 <body>
   <div class="wrap">
-    <header>
-      <div>
-        <h1>Beginner Gym Routine</h1>
-        <p class="meta">3 days per week · 45–60 minutes · 3 sets of 8–12 reps · 60–90s rest · Gradually increase weight</p>
-      </div>
-      <span class="badge">With DeltaBolic Shorts</span>
-    </header>
-
-    <div class="grid">
-      <!-- Day 1 -->
-      <section class="card">
-        <h2>Day 1 — Push (Chest · Shoulders · Triceps)</h2>
-        <ul>
-          <li>
-            <span>Chest Press (machine)</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/Qu7-ceCvq7w">How‑to short</a>
-          </li>
-          <li>
-            <span>Shoulder Press (machine or dumbbells)</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/6v4nrRVySj0">How‑to short</a>
-          </li>
-          <li>
-            <span>Chest Fly / Pec Deck</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/K15uV7lcNqs">How‑to short</a>
-          </li>
-          <li>
-            <span>Tricep Pushdown (rope or bar)</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/1FjkhpZsaxc">How‑to short</a>
-          </li>
-          <li>
-            <span>Assisted Dips</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/eicOUO9WaJc">How‑to short</a>
-          </li>
-        </ul>
-        
-      </section>
-
-      <!-- Day 2 -->
-      <section class="card">
-        <h2>Day 2 — Pull (Back · Biceps)</h2>
-        <ul>
-          <li>
-            <span>Seated Cable Row</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/LyZH4UGdDTc">How‑to short</a>
-          </li>
-          <li>
-            <span>Lat Pulldown</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/bNmvKpJSWKM">How‑to short</a>
-          </li>
-          <li>
-            <span>Back Extension / Hyperextension</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/waqxM9HvqWg">How‑to short</a>
-          </li>
-          <li>
-            <span>Bicep Curl (cable or dumbbells)</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/MKWBV29S6c0">How‑to short</a>
-          </li>
-        </ul>
-        <p class="tip">Keep rows controlled; avoid turning them into bicep curls. Think “elbows drive back.”</p>
-      </section>
-
-      <!-- Day 3 -->
-      <section class="card">
-        <h2>Day 3 — Legs + Core</h2>
-        <ul>
-          <li>
-            <span>Leg Press</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/EotSw18oR9w">How‑to short</a>
-          </li>
-          <li>
-            <span>Leg Curl (lying or seated)</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/_lgE0gPvbik">How‑to short</a>
-          </li>
-          <li>
-            <span>Leg Extension</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/NFZOoljTSHo">How‑to short</a>
-          </li>
-          <li>
-            <span>Calf Raises</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/a-x_NR-ibos">How‑to short</a>
-          </li>
-          <li>
-            <span>Core: Plank</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/xe2MXatLTUw">How‑to short</a>
-          </li>
-          <li>
-            <span>Core: Decline / Hanging Leg Raises</span>
-            <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/shorts/aP4HfrLkOLU">How‑to short</a>
-          </li>
-        </ul>
-        <p class="tip">For core, choose 2–3 moves and do 2–3 rounds at the end.</p>
-      </section>
-    </div>
-
-    <section class="card" style="margin-top:16px;">
-      <h3>How to Use This</h3>
-      <ul>
-        <li><span>Pick any 3 non‑consecutive days per week (e.g., Mon · Wed · Fri).</span></li>
-        <li><span>Use a weight that gets you close to 12 clean reps; when you hit 12 on all 3 sets, increase weight next time.</span></li>
-        <li><span>Move slowly, control the negative, stop 1 rep before failure.</span></li>
-        <li><span>🔥 <a class="link" target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=GQXpRWdtzRg">5‑minute warm‑up (Funk Roberts)</a> before starting.</span></li>
-      </ul>
-    </section>
-
-    <footer>
-      Exercise tips linked from <strong>Andrew Kwong (DeltaBolic)</strong> YouTube Shorts. This page is for personal education only.
-    </footer>
+    <header><h1>Beginner Gym Routine</h1></header>
+    <p>File extracted correctly. Now add day pages.</p>
   </div>
 </body>
 </html>
