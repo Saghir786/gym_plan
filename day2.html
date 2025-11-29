@@ -32,7 +32,11 @@ a{color:var(--accent);text-decoration:none;font-weight:600}
 .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:rgba(34,211,238,0.12);border:1px solid rgba(34,211,238,0.35);color:#22d3ee;font-size:.8rem}
 .tip{margin-top:10px;color:var(--muted);font-size:.95rem}
 footer{text-align:center;color:var(--muted);padding:16px 0 32px;font-size:.92rem}
-.install-hint{position:fixed;left:12px;right:12px;bottom:12px;background:#111827;color:var(--text);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:10px 12px;display:none;z-index:10}</style>
+.install-hint{position:fixed;left:12px;right:12px;bottom:12px;background:#111827;color:var(--text);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:10px 12px;display:none;z-index:10}
+.exercise{margin-bottom:20px;padding:16px;border-radius:14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06)}
+.exercise h3{margin:0 0 12px;font-size:1.1rem;color:var(--accent)}
+.video-container{position:relative;width:100%;max-width:400px;margin:0 auto;aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:#000}
+.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}</style>
 <script>
 if ('serviceWorker' in navigator) { window.addEventListener('load',()=>navigator.serviceWorker.register('service-worker.js')); }
 let deferredPrompt;
@@ -49,13 +53,35 @@ function installApp(){ const hint=document.getElementById('install-hint'); if(de
 </header>
 <div class="card">
   <h2 style="margin-top:0;">Day 2 — Pull (Back · Biceps)</h2>
-  <ul>
-    <li><span>Seated Cable Row</span><a target="_blank" rel="noopener" href="https://www.youtube.com/shorts/LyZH4UGdDTc">Video</a></li>
-    <li><span>Lat Pulldown</span><a target="_blank" rel="noopener" href="https://www.youtube.com/shorts/bNmvKpJSWKM">Video</a></li>
-    <li><span>Back Extension / Hyperextension</span><a target="_blank" rel="noopener" href="https://www.youtube.com/shorts/waqxM9HvqWg">Video</a></li>
-    <li><span>Bicep Curl (cable or dumbbells)</span><a target="_blank" rel="noopener" href="https://www.youtube.com/shorts/MKWBV29S6c0">Video</a></li>
-  </ul>
-  <div class="tip">3 sets each · 8–12 reps · 60–90s rest.</div>
+  <div class="tip" style="margin-top:0;margin-bottom:16px;">3 sets each · 8–12 reps · 60–90s rest.</div>
+
+  <div class="exercise">
+    <h3>Seated Cable Row</h3>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/LyZH4UGdDTc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Lat Pulldown</h3>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/bNmvKpJSWKM" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Back Extension / Hyperextension</h3>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/waqxM9HvqWg" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Bicep Curl (cable or dumbbells)</h3>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/MKWBV29S6c0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
 </div>
 <div class="btns" style="margin-top:12px;">
   <a class="btn" href="day1.html">← Day 1</a>

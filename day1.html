@@ -32,7 +32,11 @@ a{color:var(--accent);text-decoration:none;font-weight:600}
 .badge{display:inline-block;padding:2px 8px;border-radius:999px;background:rgba(34,211,238,0.12);border:1px solid rgba(34,211,238,0.35);color:#22d3ee;font-size:.8rem}
 .tip{margin-top:10px;color:var(--muted);font-size:.95rem}
 footer{text-align:center;color:var(--muted);padding:16px 0 32px;font-size:.92rem}
-.install-hint{position:fixed;left:12px;right:12px;bottom:12px;background:#111827;color:var(--text);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:10px 12px;display:none;z-index:10}</style>
+.install-hint{position:fixed;left:12px;right:12px;bottom:12px;background:#111827;color:var(--text);border:1px solid rgba(255,255,255,0.08);border-radius:14px;padding:10px 12px;display:none;z-index:10}
+.exercise{margin-bottom:20px;padding:16px;border-radius:14px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.06)}
+.exercise h3{margin:0 0 12px;font-size:1.1rem;color:var(--accent)}
+.video-container{position:relative;width:100%;max-width:400px;margin:0 auto;aspect-ratio:9/16;border-radius:12px;overflow:hidden;background:#000}
+.video-container iframe{position:absolute;top:0;left:0;width:100%;height:100%;border:0}</style>
 <script>
 if ('serviceWorker' in navigator) { window.addEventListener('load',()=>navigator.serviceWorker.register('service-worker.js')); }
 let deferredPrompt;
@@ -49,14 +53,42 @@ function installApp(){ const hint=document.getElementById('install-hint'); if(de
 </header>
 <div class="card">
   <h2 style="margin-top:0;">Day 1 — Push (Chest · Shoulders · Triceps)</h2>
-  <ul>
-    <li><span>Chest Press (machine)</span><a target="_blank" rel="noopener" href="https://www.youtube.com/shorts/Qu7-ceCvq7w">Video</a></li>
-    <li><span>Shoulder Press (machine or dumbbells)</span><a target="_blank" rel="noopener" href="https://www.youtube.com/shorts/6v4nrRVySj0">Video</a></li>
-    <li><span>Chest Fly / Pec Deck</span><a target="_blank" rel="noopener" href="https://www.youtube.com/shorts/K15uV7lcNqs">Video</a></li>
-    <li><span>Tricep Pushdown (rope or bar)</span><a target="_blank" rel="noopener" href="https://www.youtube.com/shorts/1FjkhpZsaxc">Video</a></li>
-    <li><span>Assisted Dips</span><a target="_blank" rel="noopener" href="https://www.youtube.com/shorts/eicOUO9WaJc">Video</a></li>
-  </ul>
-  <div class="tip">3 sets each · 8–12 reps · 60–90s rest.</div>
+  <div class="tip" style="margin-top:0;margin-bottom:16px;">3 sets each · 8–12 reps · 60–90s rest.</div>
+
+  <div class="exercise">
+    <h3>Chest Press (machine)</h3>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/Qu7-ceCvq7w" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Shoulder Press (machine or dumbbells)</h3>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/6v4nrRVySj0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Chest Fly / Pec Deck</h3>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/K15uV7lcNqs" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Tricep Pushdown (rope or bar)</h3>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/1FjkhpZsaxc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <div class="exercise">
+    <h3>Assisted Dips</h3>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/eicOUO9WaJc" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+  </div>
 </div>
 <div class="btns" style="margin-top:12px;"><a class="btn" href="day2.html">Next → Day 2</a></div>
 
